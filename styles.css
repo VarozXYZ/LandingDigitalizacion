@@ -1,68 +1,134 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Muli', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
+  font-family: 'Muli', sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://res.cloudinary.com/diycpogap/image/upload/v1747151798/hero_bc43l9.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  padding: 20px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  width: 480px;
+  height: auto;
+}
+
+.content {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.content h2 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  margin-left: 48px;
+  max-width: 400px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-left: 48px;
+  background: linear-gradient(to right, #475b9c, #d37047);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #3b4d84, #ba5f3c);
+}
+
+/* Nav-bar section */
+.nav-bar {
+  padding: 40px 0;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    display: flex;
-    width: 90vw;
+  display: flex;
+  width: 90vw;
+  max-width: 1400px;
 }
 
 .panel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    -webkit-transition: all 700ms ease-in;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
 }
 
 .panel h3 {
-    font-size: 36px;
-    position:relative;
-    left: 40px;
-    top: 40px;
-    margin: 0;
-    opacity: 0;
+  font-size: 36px;
+  position: relative;
+  left: 40px;
+  top: 40px;
+  margin: 0;
+  opacity: 0;
 }
 
 .panel span {
-    font-size: 32px;
-    margin: 20px;
+  font-size: 32px;
+  margin: 20px;
 }
 
 .panel.active {
-    flex: 5;
+  flex: 5;
 }
 
 .panel.active h3 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media (max-width: 480px) {
-    .container {
-        width: 100vw;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
-    }
+  .panel {
+    height: 60vh;
+    margin: 10px 0;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
