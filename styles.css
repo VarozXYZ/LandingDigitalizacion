@@ -134,20 +134,141 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
+.info-section {
+  display: flex;
+  justify-content: space-around; 
+  padding: 100px 100px;
+  background-color: #fff; 
+  font-family: 'Muli', sans-serif;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .panel {
-    height: 60vh;
-    margin: 10px 0;
-  }
+.browse-tours, .newsletter-signup {
+  flex-basis: 45%; 
+}
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
+.browse-tours h2, .newsletter-signup h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.tour-categories {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-basis: 48%; 
+}
+
+.category-list li a {
+  text-decoration: none;
+  color: #5a8cc4;
+  font-size: 18px;
+  line-height: 2.5;
+  display: block;
+}
+
+.category-list li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter-signup p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.subscribe-form input[type="email"] {
+  flex-grow: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 18px;
+  background-color: #f0f0f0;
+}
+
+.subscribe-form button[type="submit"] {
+  padding: 15px 30px;
+  background-color: #6c8ec7;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.subscribe-form button[type="submit"]:hover {
+  background-color: #5a7fab;
+}
+
+.social-media-icons a {
+  color: #777;
+  margin-right: 25px;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.social-media-icons a:hover {
+  color: #555;
+}
+
+.social-media-icons .fab {
+  vertical-align: middle;
+}
+
+.discount-section {
+  background: url('https://res.cloudinary.com/diycpogap/image/upload/v1747156489/6_y1eklt.webp') no-repeat center center/cover;
+  color: #fff; 
+  padding: 80px 20px;
+  text-align: right; 
+  position: relative; 
+  min-height: 48vh; 
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end; 
+}
+
+.discount-content {
+  max-width: 500px; 
+  margin-right: 5%; 
+}
+
+.discount-content h2 {
+  font-size: 48px; 
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.discount-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn-outline {
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  color: #fff; 
+  background-color: transparent; 
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #fff; 
+  color: #333; 
 }
