@@ -386,3 +386,34 @@ body {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
+
+/* Footer Styles */
+footer {
+  background-color: #4a4a4a; /* Dark gray background from image */
+  color: #fff; /* White text color */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 28px; /* Slightly larger font for Happy Travel */
+  margin-bottom: 20px;
+  font-weight: normal; /* Normal font weight as in image */
+}
+
+.footer-social-icons a {
+  color: #fff; /* White icon color */
+  margin: 0 10px;
+  font-size: 20px; /* Icon size */
+  text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+  color: #ddd; /* Lighter shade on hover */
+}
+
+.footer-content p {
+  font-size: 14px; /* Smaller font for the quote */
+  margin-top: 20px;
+  color: #ccc; /* Lighter gray for the quote */
+}
