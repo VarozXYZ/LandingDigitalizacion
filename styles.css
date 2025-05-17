@@ -272,3 +272,117 @@ body {
   background-color: #fff; 
   color: #333; 
 }
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff; /* Or a light background color if preferred */
+}
+
+.why-choose-us .section-header h2 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.why-choose-us .section-header p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch; /* Make items stretch to fill height */
+}
+
+.feature-item {
+  background-color: #f9f9f9; /* Light background for items */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content for text blocks */
+  justify-content: center; /* Center content for text blocks */
+}
+
+.feature-item.large-image {
+  grid-column: span 2; /* Make the large image span two columns */
+  grid-row: span 2; /* Make the large image span two rows */
+  padding: 0; /* Remove padding for image containers if they only contain an image */
+}
+
+.feature-item.small-image {
+    padding: 0; /* Remove padding for image containers */
+}
+
+.feature-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-radius: 8px;
+  display: block; /* Remove extra space below image */
+}
+
+.feature-item.text-block {
+  text-align: center;
+  background-color: #FEFBF9; /* Slightly off-white background as in the image */
+}
+
+.feature-item .fa-solid {
+  font-size: 40px; /* Icon size */
+  color: #d37047; /* Example color, adjust as needed */
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Adjustments for specific layout from the image */
+.features-grid {
+    grid-template-columns: 2fr 1fr 1fr; /* Example: 2 parts for large image, 1 for others */
+    grid-template-rows: auto auto; /* Two rows */
+    align-items: stretch;
+}
+
+.feature-item.large-image {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 1 / 3; /* Spans two rows */
+}
+
+.feature-item.small-image:nth-of-type(2) { /* First small image */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.feature-item.text-block:nth-of-type(3) { /* First text block */
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.feature-item.text-block:nth-of-type(4) { /* Second text block */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.feature-item.small-image:nth-of-type(5) { /* Second small image */
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
